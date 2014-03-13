@@ -1,4 +1,5 @@
 name: My first Jekyll site
+safe: false
 markdown: redcarpet
 pygments: true
 source: /
