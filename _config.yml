@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
+name: My first Jekyll site
 markdown: redcarpet
 pygments: true
+source: /
