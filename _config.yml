@@ -4,4 +4,5 @@ lsi: false
 markdown: redcarpet
 pygments: true
 source: /
-baseurl: "/digexcite"
+baseurl: /digexcite
+layouts: ./_layouts
