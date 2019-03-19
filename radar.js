@@ -49,9 +49,9 @@ function radar_visualization(config) {
 
   const rings = [
     { radius: 520 },
-    { radius: 880 },
-    { radius: 1240 },
-    { radius: 1600 }
+    { radius: 780 },
+    { radius: 1040 },
+    { radius: 1300 }
   ];
 
   const title_offset =
@@ -61,10 +61,10 @@ function radar_visualization(config) {
     { x: -675, y: 800 };
 
   const legend_offset = [
-    { x: 2000, y: 0 },
+    { x: 1350, y: 0 },
     { x: -2920, y: 0 },
     { x: -2920, y: -1920 },
-    { x: 2000, y: -1920 }
+    { x: 1350, y: -1920 }
   ];
 
   function polar(cartesian) {
@@ -207,13 +207,13 @@ function radar_visualization(config) {
 
   // draw grid lines
   grid.append("line")
-    .attr("x1", 0).attr("y1", -1600)
-    .attr("x2", 0).attr("y2", 1600)
+    .attr("x1", 0).attr("y1", -1300)
+    .attr("x2", 0).attr("y2", 1300)
     .style("stroke", config.colors.grid)
     .style("stroke-width", 1);
   grid.append("line")
-    .attr("x1", -1600).attr("y1", 0)
-    .attr("x2", 1600).attr("y2", 0)
+    .attr("x1", -1300).attr("y1", 0)
+    .attr("x2", 1300).attr("y2", 0)
     .style("stroke", config.colors.grid)
     .style("stroke-width", 1);
 
@@ -261,18 +261,18 @@ function radar_visualization(config) {
         dx = 0
         break;
       case 1:
-          dx = 250
-          break;
-      case 2:
           dx = 500
           break;
+      case 2:
+          dx = 1000
+          break;
       case 3:
-          dx = 750
+          dx = 1500
           break;
       default:
         dx = 0;
     }
-    var dy = (index == null ? 0 : (index+1) * 36);
+    var dy = (index == null ? 0 : (index+1) * 50);
     if (ring == null) dy= -50
     //if (ring % 2 === 1) {
     //  dy = dy + 136 + segmented[quadrant][ring-1].length * 36;
@@ -296,18 +296,18 @@ function radar_visualization(config) {
         dx = 0
         break;
       case 1:
-          dx = 250
-          break;
-      case 2:
           dx = 500
           break;
+      case 2:
+          dx = 1000
+          break;
       case 3:
-          dx = 750
+          dx = 1500
           break;
       default:
         dx = 0;
     }
-    var dy = (index == null ? 0 : (index +1) * 36);
+    var dy = (index == null ? 0 : (index +1) * 50);
     //if (ring % 2 === 1) {
     //  dy = dy + 136 + segmented[quadrant][ring-1].length * 36 ;
     //}
@@ -315,7 +315,7 @@ function radar_visualization(config) {
 
     return translate(
       legend_offset[quadrant].x + dx,
-      legend_offset[quadrant].y + dy + 12
+      legend_offset[quadrant].y + dy + 20
     );
   }
 
@@ -379,7 +379,7 @@ function radar_visualization(config) {
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return  " (" + d.domain+ ")"; })
               .style("font-family", "Arial, Helvetica")
-              .style("font-size", "20")
+              .style("font-size", "18")
 
       }
     }
@@ -476,7 +476,7 @@ function radar_visualization(config) {
         .style("fill", d.color);
     } else {
       blip.append("circle")
-        .attr("r", 9)
+        .attr("r", 20)
         .attr("fill", d.color);
     }
 
@@ -485,17 +485,17 @@ function radar_visualization(config) {
       var blip_text = config.print_layout ? d.id : d.label.match(/[a-z]/i);
       blip.append("text")
         .text(blip_text)
-        .attr("y", 3)
+        .attr("y", 5)
         .attr("text-anchor", "middle")
         .style("fill", "#000")
         .style("font-family", "Arial, Helvetica")
-        .style("font-size", function(d) { return blip_text.length > 2 ? "8" : "9"; })
+        .style("font-size", function(d) { return blip_text.length > 2 ? "16" : "16"; })
         .style("pointer-events", "none")
         .style("user-select", "none");
       blip.append("text")
         .text(d.label.substring(0,15) + "...")
         .attr("y", 3)
-        .attr("x", 10)
+        .attr("x", 14)
         .attr("text-anchor", "left")
         .style("fill", "#000")
         .style("font-family", "Arial, Helvetica")
