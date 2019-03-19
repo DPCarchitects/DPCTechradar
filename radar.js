@@ -356,7 +356,7 @@ function radar_visualization(config) {
           .attr("transform", legend_transform(quadrant, ring))
           .text(config.rings[ring].name)
           .style("font-family", "Arial, Helvetica")
-          .style("font-size", "12")
+          .style("font-size", "22")
           .style("font-weight", "bold");
         legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
@@ -367,7 +367,7 @@ function radar_visualization(config) {
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return d.id + ". " + d.label ; })
               .style("font-family", "Arial, Helvetica")
-              .style("font-size", "11")
+              .style("font-size", "20")
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
               .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); });
         legend.selectAll(".legendb" + quadrant + ring)
@@ -379,7 +379,7 @@ function radar_visualization(config) {
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return  " (" + d.domain+ ")"; })
               .style("font-family", "Arial, Helvetica")
-              .style("font-size", "11")
+              .style("font-size", "20")
 
       }
     }
