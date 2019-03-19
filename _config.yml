@@ -6,3 +6,5 @@ pygments: true
 source: /
 baseurl: /digexcite
 layouts: ./_layouts
+
+theme: jekyll-theme-slate
