@@ -1,1 +1,121 @@
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>DPC Technologie radar</title>
+<!-- meta tags for icons -->
+<link rel="shortcut icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon.ico"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-16.png" sizes="16x16" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-48.png" sizes="48x48" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-62.png" sizes="62x62" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-192.png" sizes="192x192" type="image/png"/>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="radar.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 6000,
+  height: 4000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "VRT DPC SPORZA Technologie Radar",
+  quadrants: [
+    { name: "languages-frameworks" },
+    { name: "tools" },
+    { name: "platforms" },
+    { name: "techniques" }
+  ],
+  rings: [
+    { name: "ASSESS", color: "#93c47d" },
+    { name: "TRIAL", color: "#93d2c2" },
+    { name: "ADOPT", color: "#fbdb84" },
+    { name: "HOLD", color: "#efafa9" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries:
+[
+{ label: "ReactJS", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"aem - front-end - mobile" },
+{ label: "Experience fragments", ring: 0, quadrant: 2, active:true, link:"", moved:0, domain:"aem" },
+{ label: "Monitoring: testinspanningen zichtbaar maken", ring: 1, quadrant: 3, active:true, link:"", moved:0, domain:"testing" },
+{ label: "Docker", ring: 0, quadrant: 1, active:true, link:"", moved:0, domain:"aem - general development" },
+{ label: "Fastlane", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Sentry", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Kotlin", ring: 0, quadrant: 0, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Swift", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Objective c", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Firebase", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Puppeteer", ring: 3, quadrant: 3, active:true, link:"", moved:0, domain:"testing" },
+{ label: "Acapela (voice service)", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development" },
+{ label: "Feature Toggles", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"general development - front-end" },
+{ label: "MVVM", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "MVP (Model View Presenter)", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "dependency injection", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"general development" },
+{ label: "snapshot testen", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"mobile - front-end - testing" },
+{ label: "Contract driven testing", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"general development - testing" },
+{ label: "Code reviews", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"general development" },
+{ label: "Smoke testen", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"testing - general development" },
+{ label: "SonarQube", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"general development" },
+{ label: "XCode", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "Android Studio", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"mobile" },
+{ label: "BitBucket", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"general development - front-end - media-delivery - infra - mobile - aem" },
+{ label: "WebPack", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"front-end" },
+{ label: "Zeplin", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"front-end - UX" },
+{ label: "Storybook", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"front-end - UX" },
+{ label: "Gulp", ring: 3, quadrant: 1, active:true, link:"", moved:0, domain:"front-end" },
+{ label: "AWS API Gateway", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "AWS Lambda", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development" },
+{ label: "Qualtrics", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"UX" },
+{ label: "AWS SNS", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "Kibana", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "Prometheus", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "AWS CloudFormation", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "Qualifio", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"front-end - crm" },
+{ label: "AWS RDS", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "Java 11", ring: 0, quadrant: 0, active:true, link:"", moved:0, domain:"general development" },
+{ label: "Redux", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"front-end - general development" },
+{ label: "Gatsby", ring: 1, quadrant: 0, active:true, link:"", moved:0, domain:"front-end" },
+{ label: "Pact", ring: 1, quadrant: 1, active:true, link:"", moved:0, domain:"testing" },
+{ label: "Puppet", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"infra" },
+{ label: "Spring", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"general development" },
+{ label: "SpringBoot 2", ring: 0, quadrant: 0, active:true, link:"", moved:0, domain:"general development" },
+{ label: "Service-workers", ring: 0, quadrant: 0, active:true, link:"", moved:0, domain:"front-end" },
+{ label: "Typescript", ring: 0, quadrant: 0, active:true, link:"", moved:0, domain:"front-end" },
+{ label: "Pair Programming", ring: 0, quadrant: 3, active:true, link:"", moved:0, domain:"general development - agile" },
+{ label: "In-app notifications", ring: 0, quadrant: 3, active:true, link:"", moved:0, domain:"mobile - crm" },
+{ label: "Web-notifications", ring: 0, quadrant: 3, active:true, link:"", moved:0, domain:"front-end - crm" },
+{ label: "A/B testen", ring: 0, quadrant: 3, active:true, link:"", moved:0, domain:"crm - front-end - UX" },
+{ label: "Test Driven Development", ring: 0, quadrant: 3, active:true, link:"", moved:0, domain:"general development - testing" },
+]
+
+
+
+
+
+
+  //ENTRIES
+});
+</script>
+
+
+
+
+
+</body>
+</html>
 
