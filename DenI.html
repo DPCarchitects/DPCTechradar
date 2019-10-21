@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>DPC Data en Intelligence Technologie radar</title>
+<!-- meta tags for icons -->
+<link rel="shortcut icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon.ico"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-16.png" sizes="16x16" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-48.png" sizes="48x48" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-62.png" sizes="62x62" type="image/png"/>
+<link rel="icon" href="https://www.vrt.be/etc/designs/vrtnieuws/clientlib-site/dist/assets/images/favicon/favicon-192.png" sizes="192x192" type="image/png"/>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="radar.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 6000,
+  height: 4000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "VRT DPC Data & Intelligence Technologie Radar",
+  quadrants: [
+    { name: "languages-frameworks" },
+    { name: "tools" },
+    { name: "platforms" },
+    { name: "techniques" }
+  ],
+  rings: [
+    { name: "ASSESS", color: "#93c47d" },
+    { name: "TRIAL", color: "#93d2c2" },
+    { name: "ADOPT", color: "#fbdb84" },
+    { name: "HOLD", color: "#efafa9" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries:
+[
+{ label: "JUnit", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"testing" },
+{ label: "Exploratory testing", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"testing" },
+{ label: "Exhaustive browser based testing", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"testing" },
+{ label: "Swagger", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"testing" },
+{ label: "RabbitMQ", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"aem - general development" },
+{ label: "Multi-CDN", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"media-delivery" },
+{ label: "Quality of Experience (QoE) Analytics", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"media-delivery" },
+{ label: "Jenkins", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "Hergebruik media componenten", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"mobile - front-end - media-delivery" },
+{ label: "Postman", ring: 2, quadrant: 1, active:true, link:"", moved:0, domain:"testing" },
+{ label: "MediaMelon", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"media-delivery" },
+{ label: "Adobe Analytics", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"crm" },
+{ label: "AWS Elastic BeanStalk", ring: 2, quadrant: 2, active:true, link:"", moved:0, domain:"general development - infra" },
+{ label: "Java 8", ring: 2, quadrant: 0, active:true, link:"", moved:0, domain:"general development" },
+{ label: "Grafana", ring: 2, quadrant: 3, active:true, link:"", moved:0, domain:"infra - general development" },
+]
+  //ENTRIES
+});
+</script>
+
+
+
+
+
+</body>
+</html>
